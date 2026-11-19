@@ -1,0 +1,16 @@
+# Dependencies and build output (rebuilt by npm / Netlify)
+node_modules
+dist
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode

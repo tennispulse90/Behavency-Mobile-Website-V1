@@ -1,7 +1,7 @@
 # Behavency Mobile Website
 
 This website is edited from two places: a Windows PC and a phone. Both use the
-GitHub repo `tennispulse90/Behavency-Mobile` (branch `main`). If Netlify is
+GitHub repo `tennispulse90/Behavency-Mobile-Website-V1` (branch `main`). If Netlify is
 connected, it deploys `main` automatically on every push.
 
 ## Sync rule (always follow)

@@ -76,7 +76,8 @@
 
 @keyframes bh-clients-drift { to { transform: translateX(-50%); } }
 
-@media (max-width: 640px) {
+/* phone layout: this site is always drawn at phone size (even in a wide browser window), so it always applies */
+@media all {
   .bh-clients { padding: 22px 0 22px; gap: 14px; }
   /* on a phone: two centred lines of text, with a short purple line on each side, level with each other
      and centred between the two text lines; no divider */

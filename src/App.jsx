@@ -16,6 +16,7 @@ import Hiring from './sections/Hiring'
 import Results from './sections/Results'
 import HowRuns from './sections/HowRuns'
 import Packages from './sections/Packages'
+import WhoFor from './sections/WhoFor'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 
@@ -43,6 +44,7 @@ export default function App() {
         <Results />
         <HowRuns />
         <Packages />
+        <WhoFor />
         <Contact />
         <Footer />
       </main>

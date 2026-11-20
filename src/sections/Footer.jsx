@@ -4,7 +4,7 @@ import './Footer.css'
 /* Footer (mobile): logo and line, two short link groups, copyright. */
 
 const GROUPS = [
-  { t: 'Platform', links: [['What’s Different', '#different'], ['Packages', '#packages'], ['Behavioural Model', '#behavioural-model']] },
+  { t: 'Platform', links: [['What’s Different', '#different'], ['Packages', '#packages'], ['Who It’s For', '#who-its-for'], ['Behavioural Model', '#behavioural-model']] },
   { t: 'Company', links: [['behavency.me', 'https://behavency.me'], ['Request a Demo', '#contact'], ['Privacy Policy', '#']] },
 ]
 

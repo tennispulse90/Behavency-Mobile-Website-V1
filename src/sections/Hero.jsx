@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import DemoModal from '../DemoModal'
 import './Hero.css'
 
 /* Hero (mobile): a 3-line headline, copy, a demo button, then the step cards on an emerald panel
@@ -39,6 +40,8 @@ export default function Hero() {
   const carRef = useRef(null)
   const trkRef = useRef(null)
   const [active, setActive] = useState(0)
+  const [demo, setDemo] = useState(false)
+  const closeDemo = useCallback(() => setDemo(false), [])
   const [dragging, setDragging] = useState(false)
 
   const target = useCallback((i) => {
@@ -123,7 +126,7 @@ export default function Hero() {
             <span className="hr-l"><em>falling short.</em></span>
           </h1>
           <p className="hr-s">When things keep changing, that gap is a business risk. Behavency finds it early, helps managers close it — and proves it worked.</p>
-          <a className="hr-btn" href="#contact">Request a Demo</a>
+          <a className="hr-btn" href="#contact" onClick={(e) => { e.preventDefault(); setDemo(true) }}>Request a Demo</a>
         </div>
 
         <div className="hr-carousel" ref={carRef}>
@@ -165,6 +168,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <DemoModal open={demo} onClose={closeDemo} />
     </section>
   )
 }

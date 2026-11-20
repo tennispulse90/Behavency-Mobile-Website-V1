@@ -31,6 +31,8 @@ footer.ft { padding-top: 49px; padding-bottom: 48px; }
 /* the hero and the logo strip read as one block: only the hero's top and the strip's bottom are set above,
    the space between them stays as it was */
 
-/* "The power of play": its heading sits in a pinned stack, so the space above it comes from the stack's offset, not padding */
-#play.px { padding-top: 0; padding-bottom: 2px; }
-#play .px-stack { --px-hp: 40.7px; }
+/* "The power of play": its heading sits in a pinned stack. The heading keeps its original pinned position (94px down,
+   so the cards slide over it and cover it), and the whole stack is pulled up by the empty space above the heading,
+   so the section still has 48px above its first content. The pulled-up part is empty and clipped by the section. */
+#play.px { display: flow-root; padding-top: 0; padding-bottom: 2px; }   /* flow-root: the stack's pull-up stays inside the section */
+#play .px-stack { margin-top: -53.3px; }

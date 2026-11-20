@@ -133,3 +133,7 @@
 /* white background, the same as "They've seen the score" */
 .px { background: linear-gradient(180deg, #ffffff 0%, #fbfbfe 100%); }
 .px-res { background: #fbfbfe; }
+
+/* the three stage cards: no drop shadow, light grey card colour */
+.px-slide::after { content: none; }
+.px-slide .nc, .px-slide .pc { background: #f2f3f5; box-shadow: none; }

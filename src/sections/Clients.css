@@ -8,7 +8,7 @@
   gap: 20px;
   justify-items: center;
   padding: 28px 0 8px;
-  background: #fff;                    /* the page behind is cream; the sections around it are white */
+  background: #f3f4fb;                 /* same as the bottom of the hero above it */
 }
 
 .bh-clients__line {

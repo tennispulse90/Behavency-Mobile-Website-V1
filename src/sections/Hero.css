@@ -14,10 +14,10 @@
 .hr-btn { display: inline-block; margin-top: 20px; padding: 14px 26px; border-radius: 999px; background: var(--navy); color: #fff; font-weight: 600; font-size: 15.5px; text-decoration: none; }
 
 /* the cards and their track */
-.hr-trk { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; cursor: grab; padding: 4px 12px 8px; scroll-padding: 0 12px; }
+.hr-trk { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; cursor: grab; padding: 4px 24px 8px; scroll-padding: 0 24px; }
 .hr-trk::-webkit-scrollbar { display: none; }
 .hr-trk.drag { cursor: grabbing; scroll-snap-type: none; }
-.hr-card { flex: none; width: calc(100% - 24px); scroll-snap-align: start; background: #fff; border-radius: 18px; padding: 14px 14px 4px; box-shadow: 0 10px 26px rgba(10,20,60,.14); text-align: left; user-select: none; }
+.hr-card { flex: none; width: 100%; scroll-snap-align: start; background: #fff; border-radius: 18px; padding: 14px 14px 4px; box-shadow: 0 10px 26px rgba(10,20,60,.14); text-align: left; user-select: none; }
 .hr-ch { display: flex; align-items: center; gap: 10px; padding-bottom: 11px; border-bottom: 1px solid #eef0f4; }
 .hr-ci { flex: none; width: 38px; height: 38px; border-radius: 11px; background: var(--tint); display: grid; place-items: center; }
 .hr-ci svg { width: 20px; height: 20px; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

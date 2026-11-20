@@ -45,7 +45,7 @@
 .nc-faces img { width: 24px; height: 24px; margin-right: -6px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1.6px #e9d9c4; }
 
 /* ---- insight report ---- */
-.nc-rep { position: absolute; left: 20px; right: 20px; bottom: 28px; height: 298px; padding: 11px 12px 12px; box-sizing: border-box; border-radius: 22px; background: linear-gradient(150deg, #0c6e49 0%, #14935f 100%); box-shadow: 0 16px 28px rgba(12, 110, 73, .3); }
+.nc-rep { position: absolute; left: 20px; right: 20px; bottom: 28px; height: 298px; padding: 11px 12px 12px; box-sizing: border-box; border-radius: 22px; background: linear-gradient(150deg, #0c6e49 0%, #14935f 100%); }
 .nc-rep-top { display: flex; align-items: center; justify-content: space-between; height: 26px; }
 .nc-rep-top span { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; color: #fff; }
 .nc-rep-top span svg { width: 15px; height: 15px; }

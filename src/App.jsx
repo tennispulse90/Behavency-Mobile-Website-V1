@@ -14,6 +14,7 @@ import HowMeasure from './sections/HowMeasure'
 import Different from './sections/Different'
 import Hiring from './sections/Hiring'
 import Results from './sections/Results'
+import HoldsBack from './sections/HoldsBack'
 import HowRuns from './sections/HowRuns'
 import Packages from './sections/Packages'
 import WhoFor from './sections/WhoFor'
@@ -43,6 +44,8 @@ export default function App() {
         <Different />
         <Hiring />
         <Results />
+        <HoldsBack variant="split" />
+        <HoldsBack variant="focus" />
         <HowRuns />
         <Packages />
         <WhoFor />

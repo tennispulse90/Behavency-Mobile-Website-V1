@@ -20,8 +20,8 @@ export default function Measure() {
   return (
     <section ref={ref} className={`ms ${seen ? 'is-in' : ''}`} id="measure">
       <div className="ms-in">
-        <div className="ms-eyebrow rv" style={{ '--i': 0 }}><em>04</em><i aria-hidden="true" /><span>Measure</span><u aria-hidden="true" /><s>Prove the impact</s></div>
-        <h2 className="ms-title rv" style={{ '--i': 1 }}>Then we run the assessment again.<span>And show you what changed.</span></h2>
+        <h2 className="ms-title rv" style={{ '--i': 0 }}>Then we run the assessment again.<span>And show you what changed.</span></h2>
+        <div className="ms-eyebrow rv" style={{ '--i': 1 }}><em>04</em><i aria-hidden="true" /><span>Measure</span><u aria-hidden="true" /><s>Prove the impact</s></div>
         <p className="ms-text rv" style={{ '--i': 2 }}>We use the same questions with the same people, six months later. The results sit side by side with where they started.</p>
         <p className="ms-text ms-text--2 rv" style={{ '--i': 3 }}>This closes the ROI loop. Not with anecdote, but with data.</p>
 

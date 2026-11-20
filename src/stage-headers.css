@@ -1,0 +1,15 @@
+/* Trial: in the four stage sections (Identify, Engage, Build, Measure) the big header comes first, then the stage pill,
+   then the sub text. This file only sets the spacing for that order; the order itself is in each section's .jsx.
+   To undo: remove this file's import from App.jsx and put each pill back above its header. */
+
+/* the header now opens the section */
+.id-title, .eg-title, .bd-title, .ms-title { margin-top: 0; }
+
+/* the pill sits under the header */
+.id .id-stage { margin: 20px 0 0 31px; }
+.eg .eg-eyebrow { margin-top: 20px; }
+.bd .bd-eyebrow { margin-top: 20px; }
+.ms .ms-eyebrow { margin-top: 20px; }
+
+/* the sub text follows the pill */
+.id .id-text, .eg .eg-lead, .bd .bd-text, .ms .ms-text:not(.ms-text--2) { margin-top: 20px; }

@@ -23,6 +23,7 @@ import Footer from './sections/Footer'
 
 import './typography.css'
 import './stages.css'
+import './stage-headers.css'
 
 export default function App() {
   return (

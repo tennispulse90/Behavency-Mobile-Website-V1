@@ -17,17 +17,17 @@ export default function Engage() {
   return (
     <section ref={ref} className={`eg ${seen ? 'is-in' : ''}`} id="engage">
       <div className="eg-in">
-        <div className="eg-eyebrow rv" style={{ '--i': 0 }}>
-          <b>02</b><i aria-hidden="true">—</i><strong>Engage</strong><u aria-hidden="true" /><span>Experience how your team works together</span>
-        </div>
-
-        <h2 className="eg-title rv" style={{ '--i': 1 }}>
+        <h2 className="eg-title rv" style={{ '--i': 0 }}>
           They’ve seen the score. Now let them <em>experience it.
           <svg className="eg-swoosh" viewBox="0 0 470 22" preserveAspectRatio="none" aria-hidden="true">
             <defs><linearGradient id="eg-sw" x1="0" x2="1"><stop offset="0" stopColor={GREEN} stopOpacity=".2" /><stop offset=".25" stopColor={GREEN} /><stop offset=".85" stopColor={GREEN} /><stop offset="1" stopColor={GREEN} stopOpacity=".35" /></linearGradient></defs>
             <path d="M4 17 Q230 -2 466 11" fill="none" stroke="url(#eg-sw)" strokeWidth="3.4" strokeLinecap="round" />
           </svg></em>
         </h2>
+
+        <div className="eg-eyebrow rv" style={{ '--i': 1 }}>
+          <b>02</b><i aria-hidden="true">—</i><strong>Engage</strong><u aria-hidden="true" /><span>Experience how your team works together</span>
+        </div>
 
         <p className="eg-sub eg-lead rv" style={{ '--i': 2 }}>Through team challenges and decisions, participants experience the same behavioural areas they assessed, seeing how they shape the way people work together.</p>
         <p className="eg-sub rv" style={{ '--i': 2 }}>A score can be read and forgotten.<br />An experience stays.</p>

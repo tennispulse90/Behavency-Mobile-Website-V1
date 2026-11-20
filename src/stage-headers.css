@@ -13,7 +13,7 @@
 /* the label: no box, no shadow, close under the header */
 .id .id-stage, .eg .eg-eyebrow, .bd .bd-eyebrow, .ms .ms-eyebrow {
   display: flex; align-items: center; gap: 8px; width: auto; max-width: none;
-  margin-top: 14px; margin-bottom: 0; margin-right: 0; padding: 0; border-radius: 0; background: none; box-shadow: none;
+  margin-top: 24px; margin-bottom: 0; margin-right: 0; padding: 0; border-radius: 0; background: none; box-shadow: none;
   line-height: 1; white-space: nowrap; flex-wrap: wrap; row-gap: 8px;
 }
 .id-stage > *, .eg-eyebrow > *, .bd-eyebrow > *, .ms-eyebrow > * { flex: none; }
@@ -41,7 +41,7 @@
 }
 
 /* Engage: the swoosh under "experience it." needs a little room */
-.eg .eg-eyebrow { margin-top: 24px; }
+.eg .eg-eyebrow { margin-top: 32px; }
 
 /* more room before the sub text, so the label belongs to the header */
 .id .id-text, .eg .eg-lead, .bd .bd-text, .ms .ms-text:not(.ms-text--2) { margin-top: 26px; }

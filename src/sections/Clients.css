@@ -40,8 +40,8 @@
   max-width: 1240px;
   overflow: hidden;
   /* soft fade at both ends */
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 18%, #000 82%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 18%, #000 82%, transparent 100%);
 }
 
 .bh-clients__track {
@@ -78,7 +78,8 @@
 
 /* phone layout: this site is always drawn at phone size (even in a wide browser window), so it always applies */
 @media all {
-  .bh-clients { padding: 22px 0 22px; gap: 14px; }
+  /* 16px from the text to the logos, 28px below the logos (the bottom padding is set in spacing.css) */
+  .bh-clients { padding: 22px 0 28px; gap: 16px; }
   /* on a phone: two centred lines of text, with a short purple line on each side, level with each other
      and centred between the two text lines; no divider */
   .bh-clients__line {
@@ -90,15 +91,14 @@
   .bh-clients__line::before { grid-area: l; }
   .bh-clients__line::after { grid-area: r; }
   .bh-clients__sep { display: none; }
-  .bh-clients__group { gap: 36px; padding-right: 36px; }
-  .bh-clients__group img { transform: scale(.8); }
+  .bh-clients__group { gap: 36px; padding: 0 36px 0 0; }
   .bh-clients__track { animation-duration: 45s; }
 }
 
 /* People who turn off motion: one still, centred row that wraps. */
 @media (prefers-reduced-motion: reduce) {
   .bh-clients__track { animation: none; width: auto; justify-content: center; }
-  .bh-clients__group { flex-wrap: wrap; justify-content: center; row-gap: 18px; padding: 6px 22px; }
+  .bh-clients__group { flex-wrap: wrap; justify-content: center; row-gap: 18px; padding: 0 22px; }
   .bh-clients__group[aria-hidden="true"] { display: none; }
   .bh-clients__marquee { -webkit-mask-image: none; mask-image: none; }
 }

@@ -7,7 +7,7 @@
 /* 48px of free space at the top and bottom of every section (measured from the first and last thing you can see).
    Each value below is the padding that gives exactly that, given how the section's content is laid out inside. */
 #hero.hr { padding-top: 13.7px; }
-section.bh-clients { padding-bottom: 38.6px; }
+section.bh-clients { padding-bottom: 28px; }   /* the logo strip: 28px under the logos, as asked */
 #why-now.wn { padding-top: 28px; padding-bottom: 21px; }
 #platform.pf { padding-top: 50px; padding-bottom: 48px; }
 #identify.id { padding-top: 55px; padding-bottom: 48px; }

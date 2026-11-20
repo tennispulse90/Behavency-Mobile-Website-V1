@@ -1,27 +1,52 @@
-/* "How it runs" (mobile) */
-.hw { padding: 48px 22px 44px; background: #f7f5f0; font-family: Inter, system-ui, sans-serif; color: #1b1f3b; }
+/* "How it runs" (mobile): navy, with amber as its accent. */
+.hw {
+  position: relative; padding: 50px 22px 40px; overflow: hidden; font-family: Inter, Arial, Helvetica, sans-serif; color: #fff;
+  background:
+    radial-gradient(300px 260px at 100% 4%, rgba(245, 165, 36, .16), transparent 70%),
+    radial-gradient(320px 300px at 0% 62%, rgba(31, 184, 166, .14), transparent 70%),
+    linear-gradient(175deg, #0d1838 0%, #122452 55%, #0e1a3f 100%);
+}
 .hw *, .hw *::before, .hw *::after { box-sizing: border-box; }
 
-.hw-pill { display: inline-flex; align-items: center; gap: 9px; max-width: 100%; padding: 8px 14px; border-radius: 999px; background: #fff; box-shadow: 0 4px 14px rgba(30, 45, 90, .08); font-size: 12px; color: #5b6070; white-space: nowrap; }
-.hw-dash { width: 16px; height: 1.6px; background: #1e2d5a; flex: none; }
-.hw-pill b { font-size: 13px; font-weight: 700; color: #1e2d5a; }
-.hw-pill i { width: 1px; height: 14px; background: #d9dce6; flex: none; }
+/* the stage pill, as on the other sections */
+.hw-pill { display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, .08); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); white-space: nowrap; line-height: 1; }
+.hw-pill b { font-family: 'Source Serif 4', Georgia, serif; font-size: 15.5px; font-weight: 700; color: #ffc163; }
+.hw-pill u { width: 1px; height: 13px; background: rgba(255, 255, 255, .25); }
+.hw-pill span { font-size: 12.8px; color: rgba(255, 255, 255, .78); }
 
-.hw-h { margin: 18px 0 0; font: 400 34px/1.1 'Playfair Display', Georgia, serif; letter-spacing: -.015em; color: #1a1a1a; }
-.hw-h em { font-style: italic; color: #e08a1e; }
-.hw-sub { margin: 12px 0 0; font-size: 15.5px; line-height: 1.5; color: #5b6070; }
+.hw-title { margin: 20px 6px 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 40px; line-height: 41px; letter-spacing: -.03em; text-wrap: balance; font-optical-sizing: none; font-variation-settings: 'opsz' 30; color: #fff; }
+.hw-title em { font-style: italic; font-weight: 500; letter-spacing: -.02em; color: #ffb547; }
+.hw-text { margin: 16px 6px 0; font-size: 17.4px; line-height: 23.8px; color: rgba(255, 255, 255, .86); }
 
-/* the timeline: a number on the left, its card on the right, joined by a line that shifts colour step to step */
-.hw-steps { list-style: none; margin: 28px 0 0; padding: 0; }
-.hw-step { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding-bottom: 14px; }
-.hw-step::before { content: ''; position: absolute; left: 19px; top: 40px; bottom: 0; width: 2px; background: linear-gradient(var(--c), var(--n)); }
-.hw-step:last-child { padding-bottom: 0; }
-.hw-step:last-child::before { display: none; }
-.hw-num { position: relative; z-index: 1; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #fff; box-shadow: 0 3px 10px rgba(30, 45, 90, .1); font: italic 400 18px/1 'Playfair Display', Georgia, serif; color: var(--c); }
-.hw-card { padding: 14px 16px 16px; border-radius: 16px; background: #fff; border: 1px solid #ece9e2; }
-.hw-card small { display: block; font-size: 11.5px; font-weight: 500; color: #8a8fa0; }
-.hw-card h3 { margin: 4px 0 0; font: 400 21px/1.2 'Playfair Display', Georgia, serif; color: #1a1a1a; }
-.hw-card p { margin: 6px 0 0; font-size: 14px; line-height: 1.45; color: #4a4f60; }
-.hw-chip { display: inline-block; margin-top: 10px; padding: 5px 11px; border-radius: 999px; background: #f2f0eb; font-size: 12.5px; font-weight: 600; color: #3a3f50; }
+/* the "Programme plan" panel */
+.hw-panel { margin-top: 28px; border-radius: 24px; background: linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .04)); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); overflow: hidden; }
+.hw-bar { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid rgba(255, 255, 255, .1); background: rgba(255, 255, 255, .04); }
+.hw-dots { display: flex; gap: 5px; }
+.hw-dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, .25); }
+.hw-bar strong { font-size: 13.5px; font-weight: 700; letter-spacing: -.01em; }
+.hw-bar em { margin-left: auto; padding: 4px 10px; border-radius: 999px; background: rgba(255, 181, 71, .16); color: #ffc163; font-style: normal; font-size: 11.5px; font-weight: 700; }
 
-.hw-note { margin: 18px 0 0; font-size: 12.5px; color: #8a8fa0; }
+/* the timeline: one glowing line from teal to amber, an icon node per step */
+.hw-steps { position: relative; list-style: none; margin: 0; padding: 20px 16px 6px; }
+.hw-steps::before { content: ''; position: absolute; left: 35px; top: 40px; bottom: 50px; width: 2px; border-radius: 2px; background: linear-gradient(#1fb8a6, #5c8cf0 45%, #ffb547); box-shadow: 0 0 10px rgba(255, 181, 71, .35); }
+.hw-step { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding-bottom: 18px; }
+.hw-node { position: relative; z-index: 1; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 13px; background: #16285a; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16), 0 0 0 5px #13234f; color: #fff; }
+.hw-node svg { width: 20px; height: 20px; }
+.hw-step:first-child .hw-node { background: linear-gradient(145deg, #1fb8a6, #138f86); }
+.hw-step:last-child .hw-node { background: linear-gradient(145deg, #ffb547, #f08a12); color: #1a1205; }
+.hw-body { padding-top: 1px; }
+.hw-row { display: flex; align-items: center; justify-content: space-between; }
+.hw-n { font-size: 11.5px; font-weight: 800; letter-spacing: .12em; color: rgba(255, 255, 255, .45); }
+.hw-d { display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: rgba(255, 181, 71, .14); color: #ffc163; font-size: 11.8px; font-weight: 700; white-space: nowrap; }
+.hw-d svg { width: 13px; height: 13px; }
+.hw-body h3 { margin: 6px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 21px; line-height: 1.15; letter-spacing: -.02em; color: #fff; }
+.hw-body p { margin: 6px 0 0; font-size: 14.4px; line-height: 1.5; color: rgba(255, 255, 255, .74); }
+.hw-who { display: inline-flex; align-items: center; gap: 6px; margin-top: 9px; font-size: 12.4px; font-weight: 600; color: rgba(255, 255, 255, .6); }
+.hw-who svg { width: 14px; height: 14px; }
+
+.hw-note { margin: 16px 6px 0; font-size: 12.5px; color: rgba(255, 255, 255, .5); }
+
+/* the steps arrive one after another */
+.hw-step { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .7s cubic-bezier(.22, 1, .36, 1); transition-delay: calc(var(--i) * 110ms); }
+.hw.is-in .hw-step { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .hw-step { opacity: 1; transform: none; transition: none; } }

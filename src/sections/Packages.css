@@ -1,32 +1,71 @@
-/* "Assessment packages" (mobile) */
-.pk { padding: 48px 22px 44px; background: #fff; font-family: Inter, system-ui, sans-serif; color: #1b1f3b; }
+/* "Assessment packages" (mobile): mint, with emerald as its accent. */
+.pk {
+  position: relative; padding: 50px 22px 44px; overflow: hidden; font-family: Inter, Arial, Helvetica, sans-serif; color: #0a1130;
+  background:
+    radial-gradient(280px 240px at 100% 0%, rgba(120, 222, 196, .35), transparent 70%),
+    radial-gradient(300px 280px at 0% 100%, rgba(170, 232, 214, .4), transparent 70%),
+    linear-gradient(180deg, #f2fbf8 0%, #ecf8f4 100%);
+}
 .pk *, .pk *::before, .pk *::after { box-sizing: border-box; }
 
-.pk-eyebrow { margin: 0; font-size: 11.5px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: #8a8fa0; }
-.pk-h { margin: 14px 0 0; font: 400 34px/1.1 'Playfair Display', Georgia, serif; letter-spacing: -.015em; color: #1a1a1a; }
-.pk-h em { display: block; font-style: italic; color: #16806f; }
-.pk-sub { margin: 12px 0 0; font-size: 15.5px; line-height: 1.5; color: #5b6070; }
+.pk-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 6px; font-size: 11.6px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #0b6e5c; }
+.pk-eyebrow i { width: 26px; height: 2px; border-radius: 2px; background: #10a386; }
+.pk-title { margin: 16px 6px 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 40px; line-height: 41px; letter-spacing: -.03em; text-wrap: balance; font-optical-sizing: none; font-variation-settings: 'opsz' 30; color: #0a1130; }
+.pk-title em { font-style: italic; font-weight: 500; letter-spacing: -.02em; color: #0e9a80; }
+.pk-text { margin: 16px 6px 0; font-size: 17.4px; line-height: 23.8px; color: #1c2540; }
 
-/* tabs */
-.pk-tabs { display: flex; gap: 4px; margin-top: 24px; padding: 4px; border-radius: 999px; background: #f4f2ed; }
-.pk-tabs button { flex: 1; padding: 9px 0; border: 0; border-radius: 999px; background: transparent; font-size: 13.5px; font-weight: 600; color: #6b6f80; cursor: pointer; transition: background .25s, color .25s, box-shadow .25s; }
-.pk-tabs button.on { background: #fff; color: var(--c); box-shadow: 0 2px 8px rgba(30, 30, 40, .08); }
+.pk-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
 
-/* the card */
-.pk-card { position: relative; margin-top: 14px; padding: 24px 20px 20px; border-radius: 20px; background: #faf8f4; border: 1px solid #ece9e2; border-top: 3px solid var(--c); overflow: hidden; animation: pk-in .35s ease; }
-.pk-card--hi { background: #fff; border-color: var(--c); }
-@keyframes pk-in { from { opacity: 0; transform: translateY(6px); } }
-@media (prefers-reduced-motion: reduce) { .pk-card { animation: none; } }
-.pk-badge { position: absolute; right: 0; top: 0; padding: 6px 12px; border-bottom-left-radius: 12px; background: var(--c); color: #fff; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.pk-card h3 { margin: 0; font: 400 30px/1.15 'Playfair Display', Georgia, serif; color: var(--c); }
-.pk-lede { margin: 8px 0 0; font-size: 14.5px; line-height: 1.45; color: #6b6f80; }
-.pk-card ul { list-style: none; margin: 16px 0 0; padding: 0; }
-.pk-card li { display: flex; gap: 10px; padding: 6px 0; font-size: 15px; line-height: 1.4; color: #2a2e3e; }
-.pk-card li svg { flex: none; width: 16px; height: 16px; margin-top: 2px; fill: none; stroke: var(--c); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.pk-best { margin-top: 16px; padding-top: 14px; border-top: 1px solid #ebe8e1; }
-.pk-best small { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #9a9eae; }
-.pk-best p { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #5b6070; }
-.pk-link { display: inline-block; margin-top: 16px; font-size: 15px; font-weight: 600; color: var(--c); text-decoration: none; }
+/* a card */
+.pk-card { position: relative; border-radius: 22px; background: #fff; box-shadow: inset 0 0 0 1px #d5ece5; overflow: hidden; transition: box-shadow .3s; }
+.pk-head { display: flex; align-items: center; gap: 13px; width: 100%; padding: 18px 16px 12px 16px; border: 0; background: none; text-align: left; color: inherit; cursor: pointer; }
+.pk-ico { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: #dff4ee; color: #0b8a72; }
+.pk-ico svg { width: 22px; height: 22px; }
+.pk-ht { flex: 1; min-width: 0; }
+.pk-ht strong { display: block; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 23px; line-height: 1.1; letter-spacing: -.02em; }
+.pk-ht small { display: block; margin-top: 4px; font-size: 13.2px; line-height: 1.4; color: #4b5470; }
+.pk-tog { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; box-shadow: inset 0 0 0 1px #cfe5de; color: #0b8a72; transition: transform .3s, background .3s; }
+.pk-tog svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.pk-card.on .pk-tog { transform: rotate(45deg); }
 
-.pk-foot { margin: 20px 0 0; font-size: 14px; line-height: 1.5; color: #6b6f80; text-align: center; }
-.pk-foot a { font-weight: 600; color: #1e2d5a; text-decoration: none; }
+/* how deep it goes */
+.pk-depth { display: flex; gap: 6px; padding: 0 16px 16px 73px; }
+.pk-depth span { position: relative; padding: 4px 9px 4px 20px; border-radius: 999px; background: #f1f4f3; color: #9aa5a2; font-size: 11.6px; font-weight: 600; }
+.pk-depth span::before { content: ''; position: absolute; left: 8px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: #c9d2cf; }
+.pk-depth span.y { background: #dff4ee; color: #0b6e5c; }
+.pk-depth span.y::before { background: #10a386; }
+.pk-depth span.mix { padding-left: 9px; background: repeating-linear-gradient(135deg, #e6f6f1 0 6px, #f3fbf8 6px 12px); color: #0b6e5c; }
+.pk-depth span.mix::before { display: none; }
+
+/* the open part */
+.pk-more { padding: 2px 16px 18px; }
+.pk-more ul { list-style: none; margin: 0; padding: 14px 0 0; border-top: 1px solid #e3efeb; }
+.pk-more li { display: flex; gap: 10px; padding: 5px 0; font-size: 15px; line-height: 1.4; color: #1c2540; }
+.pk-more li svg { flex: none; width: 16px; height: 16px; margin-top: 2px; fill: none; stroke: #10a386; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pk-best { margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: #f1faf7; }
+.pk-best small { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #0b8a72; }
+.pk-best p { margin: 5px 0 0; font-size: 14px; line-height: 1.45; color: #3a4560; }
+.pk-link { display: inline-flex; gap: 6px; margin-top: 14px; font-size: 15px; font-weight: 700; color: #0b8a72; text-decoration: none; }
+.pk-more:not([hidden]) { animation: pk-in .35s ease; }
+@keyframes pk-in { from { opacity: 0; transform: translateY(-4px); } }
+
+/* Complete: the solid emerald card */
+.pk-card--complete { background: linear-gradient(150deg, #0c6e5a 0%, #0f9478 60%, #13a587 100%); box-shadow: none; color: #fff; }
+.pk-card--complete .pk-ico { background: rgba(255, 255, 255, .16); color: #fff; }
+.pk-card--complete .pk-ht small { color: rgba(255, 255, 255, .82); }
+.pk-card--complete .pk-tog { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45); color: #fff; }
+.pk-card--complete .pk-depth span.y { background: rgba(255, 255, 255, .18); color: #fff; }
+.pk-card--complete .pk-depth span.y::before { background: #a6f4dc; }
+.pk-card--complete .pk-more ul { border-top-color: rgba(255, 255, 255, .2); }
+.pk-card--complete .pk-more li { color: #fff; }
+.pk-card--complete .pk-more li svg { stroke: #a6f4dc; }
+.pk-card--complete .pk-best { background: rgba(255, 255, 255, .12); }
+.pk-card--complete .pk-best small { color: #a6f4dc; }
+.pk-card--complete .pk-best p { color: rgba(255, 255, 255, .88); }
+.pk-card--complete .pk-link { color: #fff; }
+.pk-badge { position: absolute; right: 16px; top: -1px; padding: 5px 10px 6px; border-radius: 0 0 10px 10px; background: #ffd65c; color: #3d2c00; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.pk-card--complete .pk-head { padding-top: 26px; }
+
+.pk-foot { margin: 22px 6px 0; font-size: 14.2px; line-height: 1.5; color: #4b5470; }
+.pk-foot a { font-weight: 700; color: #0b8a72; text-decoration: none; }
+@media (prefers-reduced-motion: reduce) { .pk-more:not([hidden]) { animation: none; } .pk-tog { transition: none; } }

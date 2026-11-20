@@ -21,6 +21,7 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 
 import './typography.css'
+import './stages.css'
 
 export default function App() {
   return (

@@ -123,13 +123,13 @@ function ReflectCard() {
     </>
   )
   return (
-    <div className="pc" style={{ width: 925, height: 1492, '--k': 352 / 925 }}>
+    <div className="pc" style={{ width: 967, height: 1492, '--k': 352 / 925 }}>
       <Tag f={925 / 991} n="02" label="02 – The Reflection" Icon={Chat} grad="linear-gradient(145deg,#27b0ff,#1580f0)" />
       <h3 className="pc-h" style={{ left: X(118), top: Y(149), lineHeight: '84px', fontSize: 69.4 }}>The game is only<br />the beginning.</h3>
       <i className="pc-sw" style={{ left: X(118), top: Y(322), width: 262, height: 20 }} />
       <p className="pc-p" style={{ left: X(118), top: Y(383), width: 790, fontSize: 44, lineHeight: '52px' }}>A guided conversation where participants discuss what happened, why they acted as they did, and how similar behaviours appear in everyday work.</p>
 
-      <div className="pc-panel pc-r2" style={{ left: X(137), top: Y(569), width: 790, height: 761, backgroundImage: `url(${reflectPanel})` }}>
+      <div className="pc-panel pc-r2" style={{ left: X(137) + 21, top: Y(569), width: 790, height: 761, backgroundImage: `url(${reflectPanel})` }}>
         <Clock className="pc-r2-ic" style={{ left: '8.4%', top: '5.6%', width: '6.6%' }} strokeWidth={1.9} />
         <i className="pc-r2-v" style={{ left: '17.2%', top: '5.2%', height: '10%' }} />
         <b className="pc-r2-t" style={{ left: '19.4%', top: '4.9%' }}>90-minute<br />session</b>
@@ -228,9 +228,9 @@ function Results() {
 }
 
 const CARDS = [
-  { key: 'game', node: <NewGameCard />, w: 352, h: 567 },
-  { key: 'reflect', node: <ReflectCard />, w: 352, h: 567 },
-  { key: 'insight', node: <NewInsightCard />, w: 352, h: 567 },
+  { key: 'game', node: <NewGameCard />, w: 368, h: 567 },
+  { key: 'reflect', node: <ReflectCard />, w: 368, h: 567 },
+  { key: 'insight', node: <NewInsightCard />, w: 368, h: 567 },
 ]
 
 function Slide({ c, z }) {

@@ -1,5 +1,5 @@
 /* The first and third stage cards of "the power of play" (mobile): 352 × 567, live text and vector art. */
-.nc { position: absolute; left: 0; top: 0; width: 352px; height: 567px; box-sizing: border-box; padding: 24px 20px 0; border-radius: 24px; background: #fdf8f5; overflow: hidden; font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif; color: #150f52; }
+.nc { position: absolute; left: 0; top: 0; width: 368px; height: 567px; box-sizing: border-box; padding: 24px 20px 0; border-radius: 24px; background: #fdf8f5; overflow: hidden; font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif; color: #150f52; }
 
 /* the stage tag */
 .nc-tag { display: inline-flex; align-items: center; height: 27px; border-radius: 99px; background: #e8e0fb; }

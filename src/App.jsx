@@ -14,6 +14,10 @@ import HowMeasure from './sections/HowMeasure'
 import Different from './sections/Different'
 import Hiring from './sections/Hiring'
 import Results from './sections/Results'
+import HowRuns from './sections/HowRuns'
+import Packages from './sections/Packages'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
 
 import './typography.css'
 
@@ -37,6 +41,10 @@ export default function App() {
         <Different />
         <Hiring />
         <Results />
+        <HowRuns />
+        <Packages />
+        <Contact />
+        <Footer />
       </main>
     </>
   )

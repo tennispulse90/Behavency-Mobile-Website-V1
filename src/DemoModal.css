@@ -1,59 +1,20 @@
-/* "Request a demo" popup: fills the real screen (it lives outside the scaled page). */
-.dm { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: #fff; font-family: Inter, Arial, Helvetica, sans-serif; color: #0b1440; animation: dm-in .32s cubic-bezier(.22, 1, .36, 1); }
+/* "Request a Demo" popup: fills the real screen (it lives outside the scaled page), dark like the contact section,
+   with the same "Get in touch" card in it. */
+.dm { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: #1c1b19; font-family: Inter, Arial, Helvetica, sans-serif; color: #f2f1ee; animation: dm-in .32s cubic-bezier(.22, 1, .36, 1); }
 .dm *, .dm *::before, .dm *::after { box-sizing: border-box; }
 @keyframes dm-in { from { opacity: 0; transform: translateY(16px); } }
 @media (prefers-reduced-motion: reduce) { .dm { animation: none; } }
 
 /* top bar: logo left, close right */
-.dm-top { flex: none; display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 12px 0 18px; padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid #eef0f5; }
-.dm-logo { display: inline-flex; align-items: center; gap: 8px; font: 700 19px/1 'Playfair Display', Georgia, serif; color: #0b1330; }
-.dm-mark { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: #0e1b4a; }
+.dm-top { flex: none; display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 12px 0 18px; padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid #2c2b28; }
+.dm-logo { display: inline-flex; align-items: center; gap: 8px; font: 700 19px/1 'Playfair Display', Georgia, serif; color: #fff; }
+.dm-mark { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: #24407a; }
 .dm-mark svg { width: 12px; height: 12px; fill: #fff; }
-.dm-close { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: #f2f3f8; color: #0b1440; cursor: pointer; transition: background .2s; }
-.dm-close:hover { background: #e6e8f1; }
+.dm-close { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: #2c2b28; color: #fff; cursor: pointer; transition: background .2s; }
+.dm-close:hover { background: #3a3936; }
 .dm-close svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
 
 .dm-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
-.dm-in { max-width: 520px; margin: 0 auto; padding: 26px 18px calc(32px + env(safe-area-inset-bottom, 0px)); }
-
-.dm-title { margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 34px; line-height: 1.1; letter-spacing: -.03em; color: #0a1130; }
-.dm-title em { font-style: italic; font-weight: 500; color: #14a38f; }
-.dm-sub { margin: 10px 0 0; font-size: 16.5px; line-height: 1.5; color: #4a5163; }
-
-/* fields */
-.dm-form { margin-top: 22px; }
-.dm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.dm-f { display: block; min-width: 0; margin-bottom: 16px; }
-.dm-row .dm-f { margin-bottom: 16px; }
-.dm-f > span { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: #1c2540; }
-.dm-f input, .dm-f select { display: block; width: 100%; min-width: 0; height: 52px; padding: 0 14px; border: 1.5px solid #c9cedb; border-radius: 14px; background: #fff; color: #0b1440; font: 400 16px/1.2 Inter, Arial, sans-serif; outline: none; transition: border-color .2s, box-shadow .2s; }
-.dm-f select { appearance: none; -webkit-appearance: none; padding-right: 38px; text-overflow: ellipsis; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b1440' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px; }
-.dm-f select:invalid { color: #6b7185; }
-.dm-f input:focus, .dm-f select:focus { border-color: #14a38f; box-shadow: 0 0 0 3px rgba(20, 163, 143, .15); }
-.dm-row--phone { gap: 14px; }
-
-/* round tick boxes */
-.dm-help { margin: 4px 0 0; padding: 0; border: 0; }
-.dm-help legend { margin-bottom: 10px; padding: 0; font-size: 14px; font-weight: 500; color: #1c2540; }
-.dm-check { position: relative; display: flex; align-items: flex-start; gap: 14px; padding: 7px 0; cursor: pointer; }
-.dm-check input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.dm-check i { flex: none; position: relative; width: 26px; height: 26px; border: 1.5px solid #9aa0b2; border-radius: 50%; background: #fff; transition: background .2s, border-color .2s; }
-.dm-check i::after { content: ''; position: absolute; left: 8px; top: 4px; width: 6px; height: 11px; border: solid #fff; border-width: 0 2.2px 2.2px 0; transform: rotate(45deg) scale(0); transition: transform .2s; }
-.dm-check input:checked + i { background: #14a38f; border-color: #14a38f; }
-.dm-check input:checked + i::after { transform: rotate(45deg) scale(1); }
-.dm-check input:focus-visible + i { box-shadow: 0 0 0 3px rgba(20, 163, 143, .25); }
-.dm-check span { padding-top: 3px; font-size: 15px; line-height: 1.4; color: #2a3048; }
-.dm-consent { margin-top: 14px; padding-top: 18px; border-top: 1px solid #e3e6ee; }
-
-.dm-btn { display: block; width: 100%; height: 56px; margin-top: 22px; border: 0; border-radius: 999px; background: #0b1440; color: #fff; font: 600 17px/1 Inter, Arial, sans-serif; cursor: pointer; transition: background .2s; }
-.dm-btn:hover { background: #18245e; }
-.dm-btn:disabled { opacity: .6; }
-.dm-err { margin: 12px 0 0; font-size: 14px; color: #c0283f; text-align: center; }
-.dm-hp { position: absolute; left: -9999px; }
-
-/* sent */
-.dm-done { margin-top: 26px; text-align: center; }
-.dm-done-ico { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: #e3f6f1; color: #14a38f; }
-.dm-done-ico svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
-.dm-done h3 { margin: 16px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 700; }
-.dm-done p { margin: 8px 0 0; font-size: 16px; line-height: 1.5; color: #4a5163; }
+/* the card from the contact section; .ct gives it the section's colours, the padding here replaces the section's */
+.dm-in.ct { max-width: 520px; margin: 0 auto; padding: 20px 16px calc(28px + env(safe-area-inset-bottom, 0px)); }
+.dm-in .ct-card { margin-top: 0; }

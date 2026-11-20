@@ -77,11 +77,18 @@
 @keyframes bh-clients-drift { to { transform: translateX(-50%); } }
 
 @media (max-width: 640px) {
-  .bh-clients { padding: 22px 0 4px; gap: 14px; }
-  .bh-clients__line { font-size: 13.5px; gap: 4px 12px; }
-  /* on a phone: two centred lines, no dividers */
-  .bh-clients__line { flex-direction: column; gap: 2px; }
-  .bh-clients__line::before, .bh-clients__line::after, .bh-clients__sep { display: none; }
+  .bh-clients { padding: 22px 0 22px; gap: 14px; }
+  /* on a phone: two centred lines of text, with a short purple line on each side, level with each other
+     and centred between the two text lines; no divider */
+  .bh-clients__line {
+    display: grid; grid-template-columns: 32px auto 32px; grid-template-areas: "l a r" "l b r";
+    align-items: center; justify-items: center; column-gap: 14px; row-gap: 2px; font-size: 13.5px;
+  }
+  .bh-clients__line > span:first-child { grid-area: a; }
+  .bh-clients__line > span:last-child { grid-area: b; }
+  .bh-clients__line::before { grid-area: l; }
+  .bh-clients__line::after { grid-area: r; }
+  .bh-clients__sep { display: none; }
   .bh-clients__group { gap: 36px; padding-right: 36px; }
   .bh-clients__group img { transform: scale(.8); }
   .bh-clients__track { animation-duration: 45s; }

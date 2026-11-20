@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './sections/Hero'
+import Clients from './sections/Clients'
 import WhyNow from './sections/WhyNow'
 import Platform from './sections/Platform'
 import Identify from './sections/Identify'
@@ -22,6 +23,7 @@ export default function App() {
       <div className="nav-space" aria-hidden="true" />
       <main id="top">
         <Hero />
+        <Clients />
         <WhyNow />
         <Platform />
         <Identify />

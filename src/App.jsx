@@ -11,6 +11,7 @@ import Build from './sections/Build'
 import Measure from './sections/Measure'
 import HowMeasure from './sections/HowMeasure'
 import Different from './sections/Different'
+import Hiring from './sections/Hiring'
 
 import './typography.css'
 
@@ -31,6 +32,7 @@ export default function App() {
         <Measure />
         <HowMeasure />
         <Different />
+        <Hiring />
       </main>
     </>
   )

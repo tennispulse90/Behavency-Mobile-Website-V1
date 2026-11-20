@@ -1,10 +1,9 @@
 import React from 'react'
 import './Footer.css'
 
-/* Footer (mobile): logo and line, three short link groups, copyright. */
+/* Footer (mobile): logo and line, two short link groups, copyright. */
 
 const GROUPS = [
-  { t: 'The journey', links: [['01 — Identify', '#identify'], ['02 — Engage', '#engage'], ['03 — Build', '#build'], ['04 — Measure', '#measure']] },
   { t: 'Platform', links: [['What’s Different', '#different'], ['Packages', '#packages'], ['Behavioural Model', '#behavioural-model']] },
   { t: 'Company', links: [['behavency.me', 'https://behavency.me'], ['Request a Demo', '#contact'], ['Privacy Policy', '#']] },
 ]

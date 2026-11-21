@@ -46,7 +46,6 @@ export default function App() {
         <Different />
         <Hiring />
         <Results />
-        <HoldsBack variant="split" />
         <HoldsBack variant="focus" />
         <HowRuns />
         <Packages />

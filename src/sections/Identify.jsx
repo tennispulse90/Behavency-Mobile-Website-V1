@@ -77,7 +77,6 @@ export default function Identify() {
     <section ref={ref} className={`id ${seen ? 'is-in' : ''}`} id="identify">
       <h2 className="id-title rv" style={{ '--i': 0 }}>We start by <em>listening</em> — to managers, their teams, and to the organization around them.</h2>
 
-      <p className="id-stage rv" style={{ '--i': 1 }}><b>01</b><i aria-hidden="true">—</i><strong>Identify</strong><u aria-hidden="true" /><span>Reveal the strengths and gaps</span></p>
       <p className="id-text rv" style={{ '--i': 2 }}>Most assessments rely on self-perception. We combine five sources of evidence to build a more complete picture of managerial effectiveness.</p>
 
       <div className="id-stats rv" style={{ '--i': 3 }}>

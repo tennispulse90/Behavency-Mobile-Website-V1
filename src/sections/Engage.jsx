@@ -25,10 +25,6 @@ export default function Engage() {
           </svg></em>
         </h2>
 
-        <div className="eg-eyebrow rv" style={{ '--i': 1 }}>
-          <b>02</b><i aria-hidden="true">—</i><strong>Engage</strong><u aria-hidden="true" /><span>Experience how your team works together</span>
-        </div>
-
         <p className="eg-sub eg-lead rv" style={{ '--i': 2 }}>Through team challenges and decisions, participants experience the same behavioural areas they assessed, seeing how they shape the way people work together.</p>
         <p className="eg-sub rv" style={{ '--i': 2 }}>A score can be read and forgotten.<br />An experience stays.</p>
 

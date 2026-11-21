@@ -38,7 +38,7 @@ const Chat = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><path d="M8 20.4A9.
 
 /* ───────── header (reference 1199 wide, shown from y = 50) ───────── */
 function Header() {
-  /* The paragraph is set to 16px on screen on every phone (subheaders.css), so on narrow phones it can need one more line
+  /* The paragraph is set to 15px on screen on every phone (subheaders.css), so on narrow phones it can need one more line
      than the design allows. Then the stats row, "How it works" and the cards below move down by exactly the extra
      height (--px-xs, in this header's units); on wider phones it stays 0 and nothing moves. */
   const sub = useRef(null)

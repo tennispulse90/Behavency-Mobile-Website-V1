@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import App from './App'
 import Nav from './Nav'
 import './styles.css'
+import './programmes-setup.js'
+import './programmes-mobile.js'
 
 /* The mobile site is designed on a 400px-wide screen. Everything is drawn at that size and the whole
    page is scaled to the real screen width, so every section fits the screen on any phone.

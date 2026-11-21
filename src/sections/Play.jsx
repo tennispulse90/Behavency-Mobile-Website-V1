@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { useInView } from '../hooks'
 import gamePanel from '../assets/play/game-panel.webp'
 import reflectPanel from '../assets/play/reflect-v2.webp'
@@ -38,6 +38,20 @@ const Chat = (p) => (<svg viewBox="0 0 24 24" {...sv} {...p}><path d="M8 20.4A9.
 
 /* ───────── header (reference 1199 wide, shown from y = 50) ───────── */
 function Header() {
+  /* The paragraph is set to 16px on screen on every phone (subheaders.css), so on narrow phones it can need one more line
+     than the design allows. Then the stats row, "How it works" and the cards below move down by exactly the extra
+     height (--px-xs, in this header's units); on wider phones it stays 0 and nothing moves. */
+  const sub = useRef(null)
+  useLayoutEffect(() => {
+    const el = sub.current
+    const stack = el && el.closest('.px-stack')
+    if (!el || !stack) return undefined
+    const fit = () => stack.style.setProperty('--px-xs', String(Math.max(0, Math.ceil(450 + el.offsetHeight + 42 - 807))))
+    fit()
+    const ro = 'ResizeObserver' in window ? new ResizeObserver(fit) : null
+    if (ro) ro.observe(el)
+    return () => { if (ro) ro.disconnect() }
+  }, [])
   return (
     <div className="px-head">
       <div className="px-head-in">
@@ -48,7 +62,7 @@ function Header() {
           <defs><linearGradient id="px-sw" x1="0" x2="1"><stop offset="0" stopColor="#6a2ee8" stopOpacity=".25" /><stop offset=".25" stopColor="#6a2ee8" /><stop offset="1" stopColor="#6a2ee8" stopOpacity=".4" /></linearGradient></defs>
           <path d="M4 21 Q280 -4 556 12" fill="none" stroke="url(#px-sw)" strokeWidth="5" strokeLinecap="round" />
         </svg>
-        <p className="px-sub rv" style={{ '--i': 2, left: 90, top: 450, width: 1030 }}>
+        <p ref={sub} className="px-sub rv" style={{ '--i': 2, left: 90, top: 450, width: 1030 }}>
           An interactive online team game followed by a structured post-reflection, where participants explore their decisions, behaviours and how they work together.
         </p>
         <div className="px-stats rv" style={{ '--i': 3, top: 150 }}>

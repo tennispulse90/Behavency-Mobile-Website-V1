@@ -137,3 +137,10 @@
 /* the three stage cards: no drop shadow, light grey card colour */
 .px-slide::after { content: none; }
 .px-slide .nc, .px-slide .pc { background: #f2f3f5; box-shadow: none; }
+
+/* room for a longer paragraph in the header on narrow phones: --px-xs (header units, set by Header in Play.jsx) is 0
+   unless the paragraph needs an extra line; then the stats row, "How it works", the header and the cards below move down by it */
+.px-stack { --px-xs: 0; }
+.px-head { height: calc(354px + var(--px-xs) * .33361px); }
+.px-stats, .px-how { translate: 0 calc(var(--px-xs) * 1px); }
+.px-slot--head + .px-slot { margin-top: calc(var(--px-hp) + 354px + var(--px-xs) * .33361px + 34px - var(--px-p) - var(--px-h)); }

@@ -1,0 +1,14 @@
+/* Sub headers (the paragraph under each section's big header), all in one place (loaded last).
+   Matched to monday.com on a phone: 16px text with 1.6 line spacing (25.6px). Each section keeps its own colour. */
+
+.wn-text, .pf-sub, .id-text, .bm-text, .bm-areas-sub, .eg-sub, .eg-lead, .jn-sub, .ms-text, .hm-text, .bd-text,
+.hr-s, .hw-text, .pk-text, .hi-lead, .rs-lead, .hb-sub, .ct-sub {
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+/* "The power of play" draws its header on a canvas scaled to 0.33361, so the same sizes are written in its units */
+.px-sub { font-size: 47.96px; line-height: 76.74px; }
+
+/* "Training for the gaps that matter" sets its own sub header with !important */
+section.tm .tm-lead { font-size: 16px !important; line-height: 25.6px !important; }

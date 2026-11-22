@@ -25,7 +25,6 @@ import './typography.css'
 import './stages.css'
 import './stage-headers.css'
 import './spacing.css'
-import './subheaders.css'
 
 export default function App() {
   return (
@@ -47,6 +46,7 @@ export default function App() {
         <Different />
         <Hiring />
         <Results />
+        <HoldsBack variant="split" />
         <HoldsBack variant="focus" />
         <HowRuns />
         <Packages />

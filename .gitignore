@@ -1,6 +1,10 @@
 # Dependencies and build output (rebuilt by npm / Netlify)
 node_modules
 dist
+# combined Netlify build (scripts/build-site.sh)
+site
+site-desktop
+desktop-src
 
 # Logs
 *.log
